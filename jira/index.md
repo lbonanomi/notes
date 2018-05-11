@@ -53,6 +53,7 @@ yum install dejavu-sans-mono-fonts
 yum install motif
 ```
 
+
 **Have a Jira-internal admin user**
 
 If the LDAP connector fails this will allow an admin to log-in to a running instance to make repairs.
