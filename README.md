@@ -1,1 +1,1 @@
-[Assorted Opinions and Maxims for Jira Engineering](jira/index.md)
+[Assorted Opinions and Maxims for Jira Engineers](jira/index.md)
