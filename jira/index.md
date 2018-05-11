@@ -4,6 +4,9 @@
 -Friedrich Nietzsche
 
 
+If it doesn't need a complete [script](https://github.com/lbonanomi/scripts/tree/master/jira) it ends-up here.
+
+
 **You can make webhooks out of thin-air with cURL calls:**
 
 ```
