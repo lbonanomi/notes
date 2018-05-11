@@ -55,3 +55,12 @@ yum install motif
 **Have a Jira-internal admin user**
 
 If the LDAP connector fails this will allow an admin to log-in to a running instance to make repairs.
+
+
+**Get a WebSudo Token for cURL**
+
+```
+curl -s -o /dev/null -k -c cookies.txt -d "os_username=$jira_username&os_password=$jira_password" https://jira.company.com/login.jsp;
+TOKEN=$(awk '!/^#/ && !/^$/ { print $NF }' cookies.txt)
+
+```
