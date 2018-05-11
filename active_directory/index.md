@@ -1,4 +1,4 @@
-#
+# Idioms for managing Linux users in Active Directory
 
 
 Clear Active Directory "Disabled" checkbox:
