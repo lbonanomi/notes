@@ -52,9 +52,7 @@ curl -k -u ADMIN_NAME:ADMIN_PASSWORD -X POST  -H "Content-Type: application/json
 
 ## Jira email
 
-**Jira emails can be customized by altering Velocity templates at:**
-
-``` atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm```
+**Jira emails can be customized by altering Velocity templates at:** ``` atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm```
 
 
 ## Jira & Selenium
