@@ -1,8 +1,8 @@
 # Assorted Opinions and Maxims for Jira Engineering
 
-*In every real man a child is hidden that wants to play.*
-
--Friedrich Nietzsche
+> *In every real man a child is hidden that wants to play.*
+>
+> -Friedrich Nietzsche
 
 
 If it doesn't need a complete [script](https://github.com/lbonanomi/scripts/tree/master/jira) it ends-up here.
