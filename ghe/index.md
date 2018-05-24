@@ -2,4 +2,4 @@ Organization invitations from members who left the group are in a Twilight Zone 
 
 python git libraries honor .netrc content as a first-choice. >_<
 
-You may make an end-run around .gitconfig with ```HOME="" git clone```
+You may make an end-run around .gitconfig with ```HOME="" git cmd```
