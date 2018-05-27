@@ -4,4 +4,4 @@ python git libraries honor .netrc content as a first-choice. >_<
 
 You may make an end-run around .gitconfig with ```HOME="" git cmd```
 
-If you git mv or rename a file the lig is restarted. Use git log --follow to track all changes.
+If you git mv or rename a file the log is restarted. Use git log --follow to track all changes.
