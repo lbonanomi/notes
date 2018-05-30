@@ -6,4 +6,4 @@ You may make an end-run around .gitconfig with ```HOME="" git cmd```
 
 If you git mv or rename a file the log is restarted. Use git log --follow to track all changes.
 
-If search shows code but serves 404 links, reindex the whole repo @ https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search
+If search shows code but serves 404 links, reindex the code @ https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search
