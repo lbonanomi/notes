@@ -1,26 +1,27 @@
 # Assorted Opinions and Maxims for Jira Engineering
 
-> *In every real man a child is hidden that wants to play.*
->
-> -Friedrich Nietzsche
+> *In every real man a child is hidden that wants to play.*  
+> -Friedrich Nietzsche  
+
+## What's this?
+Various hints and instructions for the instalation, engineering and management of Atlassian's Jira project management system.  
+
+If it didn't need a complete [script](https://github.com/lbonanomi/scripts/tree/master/jira) it ended-up here.
 
 
-If it doesn't need a complete [script](https://github.com/lbonanomi/scripts/tree/master/jira) it ends-up here.
-
-
-## User directories and user management
+### User directories and user management
 
 **Have a Jira-internal admin user**
 
-If the LDAP connector fails this will allow an admin to log-in to a running instance to make repairs.
+If the LDAP connector fails for whatever-reason having an internal user will allow an admin to log-in to a running instance to make repairs.
 
 
  **Create a duplicate LDAP directory**
 
-Create a duplicate user directory. You can't alter a directory you're logged-into.
+Create a duplicate user directory in a disabled state. You can't alter a directory you're logged-in through.
 
 
-## Plugins
+### Plugins
 
 **Installed Jira plugins can be queried with cURL:**
 
@@ -42,6 +43,8 @@ curl -s -k -u $ADMIN:$PASSWORD https://jira.host.com/rest/plugins/1.0/$PLUGIN_KE
 curl -s -k -u $ADMIN:$PASSWORD -X PUT -H "Content-Type: application/vnd.atl.plugins.plugin+json" --data @/tmp/killer https://jira.host.com/rest/plugins/1.0/$PLUGIN_KEY
 ```
 
+[Example script](https://github.com/lbonanomi/scripts/blob/master/jira/sniper.sh)
+
 
 **You can make Jira webhooks out of thin-air with cURL calls:**
 
@@ -50,12 +53,15 @@ curl -k -u ADMIN_NAME:ADMIN_PASSWORD -X POST  -H "Content-Type: application/json
 ```
 
 
-## Jira email
+### Jira email
 
-**Jira emails can be customized by altering Velocity templates at:** ``` atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm```
+**Jira emails can be customized by altering Velocity templates at:**  
+```
+atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm
+```
 
 
-## Jira & Selenium
+### Jira & Selenium
 
 **Install DejaVu fonts packages on your JIRA hosts**
 
@@ -69,7 +75,7 @@ yum install dejavu-sans-mono-fonts
 yum install motif
 ```
 
-## Jira scripting
+### Misc Jira scripting
 
 **Get a WebSudo Token for cURL**
 
