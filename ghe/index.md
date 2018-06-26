@@ -26,9 +26,12 @@ A token with no permissions can clone repositories, but there is no such animal 
 
 ### Github Enterprise UI
 
-If a search shows code but serves 404 links, reindex the code @ https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search
+If a search shows code but serves 404 links, reindex the code @ https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search  
 
-OAUTH authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address
+OAUTH authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address.  
+
+You PRs can only be assigned to collaborators.  
+
 
 ### GHE Integration
 
