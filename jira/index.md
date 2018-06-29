@@ -11,6 +11,17 @@ If it didn't need a complete [script](https://github.com/lbonanomi/scripts/tree/
 
 ### User directories and user management
 
+**Password Qualifications**
+
+Employer's security team insists on a 90 day password expiration, after which an account gets a "must-change" flag in Active Directory. Accounts that "Must change password at next login" cannot log in to Jira until their password has changed.
+
+
+**Directory Precedence**
+
+
+Users 
+
+
 **Have a Jira-internal admin user**
 
 If the LDAP connector fails for whatever-reason having an internal user will allow an admin to log-in to a running instance to make repairs.
