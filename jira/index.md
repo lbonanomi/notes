@@ -21,7 +21,7 @@ Employer's security team insists on a 90 day password expiration, after which an
 Users are authenticated by the first directory that their name appears-in. 
 
 * Create a user in the local directory who's name duplicates a user in an LDAP/Active Directory to barge-in on existing accounts without external tools like Script-Runner.
-* Create just-Jira groups in an internal directory and assign local users duplicate to said-group. This will allow for group management if 'LDAP with local groups' is unfeasible.
+* Older versions of Jira will let you create just-Jira groups in an internal directory and assign local users duplicate to said-group. This will allow for group management if 'LDAP with local groups' is unfeasible.
 
 
 **Have a Jira-internal admin user**
