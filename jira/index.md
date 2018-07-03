@@ -65,7 +65,10 @@ atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm
 
 **Install DejaVu fonts packages on your JIRA hosts**
 
-Otherwise you will get non-Roman characters. This will choke-out [Selenium]()
+Otherwise you will get non-Roman characters, which will choke-out [Selenium](https://www.seleniumhq.org/)
+
+![Jira displaying non-Roman characters](sources/images/Jira_Sanskrit.png)
+
 
 ```
 yum install ghostscript
