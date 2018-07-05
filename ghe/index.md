@@ -19,6 +19,13 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 * If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
 
 
+### Interactions between Jenkins and GHE:
+
+* Jenkins pipeline scans process *every* tag and *every* branch of *every* repo of a target organization.  
+
+***If you do not perform regular housekeeping on organizations Jenkins will hammer on the Api::RepoCommits API endpoint and potentially slow/crash a GHE instance.***
+
+
 ### Github Enterprise Auth
 
 * A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
