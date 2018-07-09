@@ -21,7 +21,7 @@ Employer's security team insists on a 90 day password expiration, after which an
 Users are authenticated by the first directory that their name appears-in. 
 
 * Create a user in the local directory who's name duplicates a user in an LDAP/Active Directory to barge-in on existing accounts without external tools like Script-Runner.
-* Older versions of Jira will let you create just-Jira groups in an internal directory and assign local users duplicate to said-group. This will allow for group management if 'LDAP with local groups' is unfeasible.
+* Jira with Crowd can be configured to "aggregate groups" to allow for group management without sharing LDAP write permissions.
 
 
 **Have a Jira-internal admin user**
@@ -76,7 +76,7 @@ atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm
 
 ### Jira & Selenium
 
-**Install DejaVu fonts packages on your JIRA hosts**
+**Install DejaVu-Sans fonts packages on your JIRA hosts**
 
 Otherwise you will get non-Roman characters. This will choke-out [Selenium]()
 
