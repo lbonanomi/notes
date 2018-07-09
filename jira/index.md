@@ -11,6 +11,19 @@ If it didn't need a complete [script](https://github.com/lbonanomi/scripts/tree/
 
 ### User directories and user management
 
+**Password Qualifications**
+
+Employer's security team insists on a 90 day password expiration, after which an account gets a "must-change" flag in Active Directory. Accounts that "Must change password at next login" cannot log in to Jira until their password has changed. This has scalded my hands so-many times I puzzled-out the [LDAP query to check user's last password change](https://github.com/lbonanomi/notes/blob/master/active_directory/index.md) and later wrote a [python check-script](https://github.com/lbonanomi/scripts/blob/master/active_directory_last_password_reset.py) for confirming a user's last password change.
+
+
+**Directory Precedence**
+
+Users are authenticated by the first directory that their name appears-in. 
+
+* Create a user in the local directory who's name duplicates a user in an LDAP/Active Directory to barge-in on existing accounts without external tools like Script-Runner.
+* Jira with Crowd can be configured to "aggregate groups" to allow for group management without sharing LDAP write permissions.
+
+
 **Have a Jira-internal admin user**
 
 If the LDAP connector fails for whatever-reason having an internal user will allow an admin to log-in to a running instance to make repairs.
@@ -63,7 +76,7 @@ atlassian-jira/WEB-INF/classes/templates/email/subject/*.vm
 
 ### Jira & Selenium
 
-**Install DejaVu fonts packages on your JIRA hosts**
+**Install DejaVu-Sans fonts packages on your JIRA hosts**
 
 Otherwise you will get non-Roman characters, which will choke-out [Selenium](https://www.seleniumhq.org/)
 
