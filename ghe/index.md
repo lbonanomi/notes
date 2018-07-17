@@ -5,6 +5,10 @@
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training*) with a fairly-standard build of GHE 2.10 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
 
+### Abuse Throttle
+
+* "The Abuse Throttle" can make stability problems ***much worse*** in a large corporate network. Unauthenticated API calls will have their ```rate_limit_key``` set to the caller's IP, and any user routed through that IP address will be treated as an abusive user.
+
 ### Github Organizations
 
 * Organization invitations from members who left the group are in a Twilight Zone where they cannot be accepted or deleted.
