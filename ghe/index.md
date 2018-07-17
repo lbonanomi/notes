@@ -7,7 +7,7 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 
 ### Abuse Throttle
 
-* "The Abuse Throttle" can make stability problems ***much worse*** in a large corporate network. Unauthenticated API calls will have their ```rate_limit_key``` set to the caller's IP, which is a recipe for disaster if you use access routers like Bluecoat.
+* "The Abuse Throttle" can make stability problems ***much worse*** in a large corporate network. Unauthenticated API calls will have their ```rate_limit_key``` set to the caller's IP, and any user routed through that IP address will be treated as an abusive user.
 
 ### Github Organizations
 
