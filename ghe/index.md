@@ -47,3 +47,9 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 ### GHE Integration
 
 * python git libraries honor .netrc content, this may be unexpected.
+
+
+
+### GHE Username/Profile Links
+
+* Clickable links for a username are driven by the named user's email address
