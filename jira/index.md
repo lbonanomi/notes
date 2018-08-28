@@ -84,11 +84,11 @@ Otherwise you will get non-Roman characters, which will choke-out [Selenium](htt
 
 
 ```
-yum install ghostscript
-yum install dejavu-fonts-common
-yum install dejavu-sans-fonts
-yum install dejavu-sans-mono-fonts
-yum install motif
+yum install ghostscript;
+yum install dejavu-fonts-common;
+yum install dejavu-sans-fonts;
+yum install dejavu-sans-mono-fonts;
+yum install motif;
 ```
 
 ### Misc Jira scripting
