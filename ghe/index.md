@@ -1,26 +1,36 @@
 # Lessons Learned Managing a GHE Instance
 
+
+
 ## What's this?
 
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training*) with a fairly-standard build of GHE 2.10 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
 
+
 ### Abuse Throttle
 
-* "The Abuse Throttle" can make stability problems ***much worse*** in a large corporate network. Unauthenticated API calls will have their ```rate_limit_key``` set to the caller's IP, and any user routed through that IP address will be treated as an abusive user.
+* "The Abuse Throttle" can make stability problems ***much worse*** in a large corporate network. Unauthenticated API calls will have their ```rate_limit_key``` set to the caller's IP, and any user routed through that IP address will be treated as an abusive user. 
+ 
+ 
+Admins on networks that segregate traffic between PC and development networks with acess routers or firewalls please take note. 
+
+
 
 ### Github Organizations
 
 * Organization invitations from members who left the group are in a Twilight Zone where they cannot be accepted or deleted.
 
 
+
 ### Interactions between git and GHE:
 
 * You may make an end-run around a potentially bad .gitconfig with ```HOME="" git cmd```
 
-* GHE trusts whatever is in .gitconfig, with potentially hilarious results
+* GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
 
 * If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
+
 
 
 ### Interactions between Jenkins and GHE:
@@ -30,9 +40,11 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 ***If you do not perform regular housekeeping on organizations Jenkins will hammer on the Api::RepoCommits API endpoint and potentially slow/crash a GHE instance.***
 
 
+
 ### Github Enterprise Auth
 
 * A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
+
 
 
 ### Github Enterprise
@@ -50,6 +62,7 @@ Intermediate certificate errors look-like:
 ```
 +com.sun.jersey.api.client.ClientHandlerException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
+
 
 
 ### GHE Integration
