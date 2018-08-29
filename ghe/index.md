@@ -45,6 +45,12 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 
 * If you have an internal CA, remember to append the intermediate certificate underneath the server PEM and upload this entire SSL package. Browsers have trust intermediary certs pushed by IT, the Java integrations do not.
 
+Intermediate certificate errors look-like:
+
+```
++com.sun.jersey.api.client.ClientHandlerException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+```
+
 
 ### GHE Integration
 
