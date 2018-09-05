@@ -13,7 +13,7 @@ If it didn't need a complete [script](https://github.com/lbonanomi/scripts/tree/
 
 **Password Qualifications**
 
-Employer's security team insists on a 90 day password expiration, after which an account gets a "must-change" flag in Active Directory. Accounts that "Must change password at next login" cannot log in to Jira until their password has changed. This has scalded my hands so-many times I puzzled-out the [LDAP query to check user's last password change](https://github.com/lbonanomi/notes/blob/master/active_directory/index.md) and later wrote a [python check-script](https://github.com/lbonanomi/scripts/blob/master/active_directory_last_password_reset.py) for confirming a user's last password change.
+Employer's security team insists on a 90 day password expiration, after which an account gets a "must-change" flag in Active Directory. ***Accounts that "Must change password at next login" cannot log in to Jira until their password has changed. This has scalded my hands so-many times I puzzled-out the [LDAP query to check user's last password change](https://github.com/lbonanomi/notes/blob/master/active_directory/index.md) and later wrote a [python check-script](https://github.com/lbonanomi/scripts/blob/master/active_directory_last_password_reset.py) for confirming a user's last password change.***
 
 
 **Directory Precedence**
