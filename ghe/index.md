@@ -21,6 +21,7 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * Organization invitations from members who left the group are in a Twilight Zone where they cannot be accepted or deleted.
 
+* A group mentioned in a repo CODEOWNERS file must have explicit write access to the repo to work properly.
 
 
 ### Interactions between git and GHE:
