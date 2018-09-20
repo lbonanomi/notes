@@ -28,6 +28,8 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * You may make an end-run around a potentially bad .gitconfig with ```HOME="" git cmd```
 
+* Account's at my $EMPLOYER have different homedirs on some hosts. ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git clone ...```
+
 * GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
 
 * If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
