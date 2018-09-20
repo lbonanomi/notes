@@ -6,7 +6,9 @@
 
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training*) with a fairly-standard build of GHE 2.10 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
+### NuGet
 
+* NuGet ***does not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
 
 ### Abuse Throttle
 
@@ -28,7 +30,7 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * You may make an end-run around a potentially bad .gitconfig with ```HOME="" git cmd```
 
-* Account's at my $EMPLOYER have different homedirs on some hosts. ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git clone ...```
+* Use an alternate SSH key with ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git clone ...```
 
 * GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
 
@@ -56,7 +58,7 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * OAUTH authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address.  
 
-* You PRs can only be assigned to collaborators.  
+* Pull Requests can only be assigned to collaborators.  
 
 * If you have an internal CA, remember to append the intermediate certificate underneath the server PEM and upload this entire SSL package. Browsers have trust intermediary certs pushed by IT, the Java integrations do not.
 
