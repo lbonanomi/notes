@@ -8,7 +8,7 @@ Hopefully a few helpful notes for support engineers who have been assigned issue
 
 ### NuGet
 
-* NuGet ***does not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
+* NuGet is observed to ***not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
 
 ### Abuse Throttle
 
