@@ -7,6 +7,11 @@
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training or theoretical basis*) with a fairly-standard build of GHE 2.10/2.12 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
 
+### Pre-Flight Checks Failing
+
+Pre Flight Check failure pages on a formerly working instance are scary, but might not be a crisis. If the instance was crash-rebooted running ```ghe-config-apply``` will force the config files to be reloaded and services restarted on a GHE instance.
+
+
 
 ### NuGet
 
