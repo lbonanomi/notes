@@ -24,7 +24,7 @@ sudo chmod 777 /git;
     B. If the repository *isn't* browseable, login to the GHE replica appliance and run ```/usr/local/bin/ghe-repo $ORG/$REPO``` to su to the git user and be cd'd into the on-disk location of the repository. Make-note of the current working directory, and log-out of the appliance.  
     
     ```
-    REPLICA-APPLIANCE: /usr/local/bin/ghe-repo lbonanomi2/scripts
+    REPLICA-APPLIANCE: /usr/local/bin/ghe-repo lbonanomi/scripts
     git@REPLICA-APPLIANCE:/data/repositories/d/nw/d1/e4/03/100002219/7678.git$
     ```
     C. If no appliance is available the backup directory may be trolled with a find command to search for a known filename. ***Please note that this is a very time-consuming process***
