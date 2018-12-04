@@ -16,8 +16,6 @@ sudo chmod 777 /git;
 
 ====================================================================================
 
-### If you are recovering a repo from a static backup:
-
 1. Find the on-disk location of the git repository.  
     A. If the primary appliance is up and the repository is browseable, its probably easiest to go-to https://github.enterprise.url/stafftools/repositories/$ORG/$REPO/disk 
     
@@ -41,7 +39,3 @@ sudo chmod 777 /git;
 4. SSH to the standalone git repo, and untar tarballs under /git  
 5. *From another terminal* ```git clone $STANDALONE_GIT_SERVER:/git/7678.git```
   
-
-### If you are recovering a repo from a replica instance:
-
-If the repository *isn't* browseable, login to the GHE replica appliance and run ```/usr/local/bin/ghe-repo $ORG/$REPO``` to su to the git user and cd into the on-disk location of the repository.
