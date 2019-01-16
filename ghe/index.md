@@ -6,7 +6,9 @@
 
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training or theoretical basis*) with a fairly-standard build of GHE 2.10/2.12/2.14 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
-[Emergency Procedures](Emergency-Procedures)
+* [Emergency Procedures](Emergency-Procedures)  
+* [Integrations & External Programs](Integrations-and-External-Programs)  
+* [Ergonomics & Annoyances](Ergonomics-and-Annoyances)  
 
 
 ### Emergency Procedures
@@ -17,19 +19,45 @@ Pre Flight Check failure pages on a formerly working instance are scary, but mig
 
 #### Pink Unicorn Error
 
-If the front page of a GHE instance shows a Pink Unicorn:
+If the front page of a GHE instance shows a Pink Unicorn:  
 
+![Unicorn Head](ghe/images/Unicorn.png)  
 
-
-, check state/fullness of filesystem
+Check the state & fullness of filesystems on the appliance, this has been symptomatic of a filled disk before.
 
 #### Deleted Repos
 
-### NuGet
+##### Check Purgatory
 
-* NuGet is observed to ***not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
-  
-  
+##### Restoring from ghe-backup archive
+
+
+### Integrations and External Programs
+
+#### NuGet
+
+NuGet is observed to ***not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
+
+#### Interactions between git and GHE:
+
+* You may make an end-run around a potentially bad .gitconfig with ```HOME="" git cmd```
+
+* Use an alternate SSH key with ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git cmd```
+
+* GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
+
+* If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
+
+#### Interactions between Jenkins and GHE:
+
+* Jenkins pipeline scans process *every* tag and *every* branch of *every* repo of a target organization.  
+
+***If you do not perform regular housekeeping on organizations Jenkins will hammer on the Api::RepoCommits API endpoint and potentially slow/crash a GHE instance.***
+
+# GHE & Python libs:
+
+* python git libraries honor .netrc content, this may be unexpected.
+
   
 ### Restoring repos from ghe-backup snapshots
 
@@ -50,47 +78,30 @@ Admins on networks that segregate traffic between PC and development networks wi
 
   * The maintenance queue pauses during backup executions
   
+### Ergonomics and Annoyances
 
-### Github Organizations
+#### Github Organizations
 
 * Organization invitations from members who left the group are in a Twilight Zone where they cannot be accepted or deleted.
-
 * A group mentioned in a repo CODEOWNERS file must have explicit write access to the repo to work properly.
 
+#### GHE Username/Profile Links
 
-### Interactions between git and GHE:
+* Clickable links for a username are driven by the named user's email address
 
-* You may make an end-run around a potentially bad .gitconfig with ```HOME="" git cmd```
-
-* Use an alternate SSH key with ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git cmd```
-
-* GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
-
-* If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
-
-
-
-### Interactions between Jenkins and GHE:
-
-* Jenkins pipeline scans process *every* tag and *every* branch of *every* repo of a target organization.  
-
-***If you do not perform regular housekeeping on organizations Jenkins will hammer on the Api::RepoCommits API endpoint and potentially slow/crash a GHE instance.***
-
-
-
-### Github Enterprise Auth
+#### Github Enterprise Auth
 
 * A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
 
+#### Pull Requests
 
+* Pull Requests can only be assigned to collaborators.  
 
-### Github Enterprise
 
 * If a search shows code but serves 404 links, reindex the code @ ```https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search```  
 
 * OAUTH authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address.  
 
-* Pull Requests can only be assigned to collaborators.  
 
 * If you have an internal CA, remember to append the intermediate certificate underneath the server PEM and upload this entire SSL package. Browsers have trust intermediary certs pushed by IT, the Java integrations do not.
 
@@ -99,17 +110,7 @@ Intermediate certificate errors look-like:
 ```
 +com.sun.jersey.api.client.ClientHandlerException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
-  
-  
-  
-### GHE Integration
 
-* python git libraries honor .netrc content, this may be unexpected.
-  
-
-### GHE Username/Profile Links
-
-* Clickable links for a username are driven by the named user's email address
   
 
 ### State of upgrade
