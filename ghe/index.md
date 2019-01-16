@@ -37,6 +37,7 @@ Admins on networks that segregate traffic between PC and development networks wi
 ### RESQUE
 
   * The maintenance queue pauses during backup executions
+  
 
 ### Github Organizations
 
@@ -99,3 +100,7 @@ Intermediate certificate errors look-like:
 
 * Clickable links for a username are driven by the named user's email address
   
+
+### Pink Unicorn Error
+
+* In-case of a Pink Unicorn Head where your GHE instance used to be, check state/fullness of filesystem
