@@ -27,10 +27,9 @@ Check the state & fullness of filesystems on the appliance, this has been sympto
 
 #### Deleted Repos
 
-##### Check Purgatory
-
 ##### Restoring from ghe-backup archive
 
+If a repository is too-long gone to be recovered from https://$INSTANCE/stafftools/$ORGANIZATION/$REPO, single repositories can be recovered from a backup snapshot. Extract *both* the repository and the network repository (../network.git) onto a fresh VM with a standalone git server.
 
 ### Integrations and External Programs
 
