@@ -6,16 +6,24 @@
 
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training or theoretical basis*) with a fairly-standard build of GHE 2.10/2.12/2.14 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
 
-[Emergency Procedures]
+[Emergency Procedures](Emergency-Procedures)
 
 
 ### Emergency Procedures
 
-### Pre-Flight Checks Failing
+#### Pre-Flight Checks Failing
 
 Pre Flight Check failure pages on a formerly working instance are scary, but might not be a crisis. If the instance was crash-rebooted running ```ghe-config-apply``` will force the config files to be reloaded and services restarted on a GHE instance.
 
+#### Pink Unicorn Error
 
+If the front page of a GHE instance shows a Pink Unicorn:
+
+
+
+, check state/fullness of filesystem
+
+#### Deleted Repos
 
 ### NuGet
 
@@ -97,18 +105,12 @@ Intermediate certificate errors look-like:
 ### GHE Integration
 
 * python git libraries honor .netrc content, this may be unexpected.
-
-
+  
 
 ### GHE Username/Profile Links
 
 * Clickable links for a username are driven by the named user's email address
   
-
-### Pink Unicorn Error
-
-* In-case of a Pink Unicorn Head where your GHE instance used to be, check state/fullness of filesystem
-
 
 ### State of upgrade
 
