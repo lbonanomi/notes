@@ -104,3 +104,8 @@ Intermediate certificate errors look-like:
 ### Pink Unicorn Error
 
 * In-case of a Pink Unicorn Head where your GHE instance used to be, check state/fullness of filesystem
+
+
+### State of upgrade
+
+* Track upgrade status at /data/user/common/ghe-config.log
