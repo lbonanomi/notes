@@ -21,7 +21,7 @@ Pre Flight Check failure pages on a formerly working instance are scary, but mig
 
 If the front page of a GHE instance shows a Pink Unicorn:  
 
-![Unicorn Head](ghe/images/Unicorn.png)  
+![Unicorn Head](images/Unicorn.png)  
 
 Check the state & fullness of filesystems on the appliance, this has been symptomatic of a filled disk before.
 
