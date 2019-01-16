@@ -54,7 +54,7 @@ NuGet is observed to ***not work well with git 2.19***. Windows users are encour
 
 ***If you do not perform regular housekeeping on organizations Jenkins will hammer on the Api::RepoCommits API endpoint and potentially slow/crash a GHE instance.***
 
-# GHE & Python libs:
+#### GHE & Python libs:
 
 * python git libraries honor .netrc content, this may be unexpected.
 
