@@ -92,6 +92,10 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
 
+#### Notifications
+
+* *Organizations are users*, and can be disabled. If an organization *is* disabled, it *cannot* send notifications; usually manifested as issues with PR comments not being emailed to watchers.
+
 #### Pull Requests
 
 * Pull Requests can only be assigned to collaborators.  
