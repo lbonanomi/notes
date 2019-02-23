@@ -62,7 +62,7 @@ curl -s -k -u $ADMIN:$PASSWORD https://jira.host.com/rest/plugins/1.0/$PLUGIN_KE
 curl -s -k -u $ADMIN:$PASSWORD -X PUT -H "Content-Type: application/vnd.atl.plugins.plugin+json" --data @/tmp/killer https://jira.host.com/rest/plugins/1.0/$PLUGIN_KEY
 ```
 
-[Example script](https://github.com/lbonanomi/scripts/blob/master/jira/sniper.sh)
+[Example script](https://github.com/lbonanomi/scripts/sniper.sh)
 
 
 **You can make Jira webhooks out of thin-air with cURL calls:**
