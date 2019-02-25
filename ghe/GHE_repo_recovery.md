@@ -17,11 +17,11 @@ sudo chmod 777 /git;
 ====================================================================================
 
 1. Find the on-disk location of the git repository.  
-    A. If the primary appliance is up and the repository is browseable, its probably easiest to go-to https://github.enterprise.url/stafftools/repositories/$ORG/$REPO/disk 
+    A. If the primary appliance is up and the repository is browsable, its probably easiest to go-to https://github.enterprise.url/stafftools/repositories/$ORG/$REPO/disk 
     
     [On-Disk Storage screen capture](images/On-Disk_Storage.png)
     
-    B. If the repository *isn't* browseable, login to the GHE replica appliance and run ```/usr/local/bin/ghe-repo $ORG/$REPO``` to su to the git user and be cd'd into the on-disk location of the repository. Make-note of the current working directory, and log-out of the appliance.  
+    B. If the repository *isn't* browsable, login to the GHE replica appliance and run ```/usr/local/bin/ghe-repo $ORG/$REPO``` to su to the git user and be cd'd into the on-disk location of the repository. Make-note of the current working directory, and log-out of the appliance.  
     
     ```
     REPLICA-APPLIANCE: /usr/local/bin/ghe-repo lbonanomi/scripts
