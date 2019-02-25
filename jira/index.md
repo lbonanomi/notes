@@ -4,7 +4,7 @@
 > -Friedrich Nietzsche  
 
 ## What's this?
-Various hints and instructions for the instalation, engineering and management of Atlassian's Jira project management system.  
+Various hints and instructions for the installation, engineering and management of Atlassian's Jira project management system.  
 
 If it didn't need a complete [script](https://github.com/lbonanomi/scripts/#atlassian-jiracrowd-things) it ended-up here.
 
