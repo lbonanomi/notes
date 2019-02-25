@@ -1,10 +1,9 @@
 version: 2
 jobs:
-  build:
+  spelling:
     docker:
       - image: circleci/python
       
-
     steps:
       - checkout
       
