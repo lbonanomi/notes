@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       
-      - run: "chmod 755 /home/circleci/project/speller.py"
+      - run: "git clone https://github.com/lbonanomi/spell.git"
       
       - run: "git clone https://github.com/dwyl/english-words.git"
            
-      - run: "find . -type f | grep -v english-words | grep md$ | while read file; do /home/circleci/project/speller.py $file; done"
+      - run: "find . -type f | grep -v english-words | grep md$ | while read file; do /home/circleci/project/spell/speller.py $file; done"
