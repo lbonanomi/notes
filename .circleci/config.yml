@@ -11,5 +11,7 @@ jobs:
       - run: "git clone https://github.com/lbonanomi/spell.git"
       
       - run: "git clone https://github.com/dwyl/english-words.git"
+      
+      - run: "chmod 755 /home/circleci/project/spell/speller.py"
            
       - run: "find . -type f | grep -v english-words | grep md$ | while read file; do /home/circleci/project/spell/speller.py $file; done"
