@@ -18,7 +18,7 @@ for word in dirtywords:
         
 # Load a little specialist language
 
-for word in ('ghe', 'github', 'nuget', 'oauth', 'pkix', 'ssl', 'http', 'https', 'ssh', 'netrc'):
+for word in ('ghe', 'github', 'nuget', 'oauth', 'pkix', 'ssl', 'http', 'https', 'ssh', 'netrc', 'jira'):
         words.append(word.strip().lower())
 
 with open(sys.argv[1]) as source:
