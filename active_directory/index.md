@@ -29,3 +29,5 @@ Get users last password reset time in LDAP times.
 ```
 /usr/bin/ldapsearch -D 'CN=$admin_username,OU=$USER_OU,DC=$SERVER,DC=$DOMAIN,DC=com' -w '$admin_password' -h $SERVER.$DOMAIN.com -b  "DC=$SERVER,DC=$DOMAIN,DC=com" samAccountName=$USER_TO_CHECK pwdLastSet
 ```
+
+
