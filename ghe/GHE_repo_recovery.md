@@ -39,3 +39,6 @@ sudo chmod 777 /git;
 4. SSH to the standalone git repo, and untar tarballs under /git  
 5. *From another terminal* ```git clone $STANDALONE_GIT_SERVER:/git/7678.git```
   
+  
+  
+  
