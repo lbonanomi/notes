@@ -31,6 +31,10 @@ Check the state & fullness of filesystems on the appliance, this has been sympto
 
 If a repository is too-long gone to be recovered from https://$INSTANCE/stafftools/$ORGANIZATION/$REPO, single repositories can be recovered from a backup snapshot. Extract *both* the repository and the network repository (../network.git) onto a fresh VM with a standalone git server.
 
+#### LDAP 
+
+LDAP auth will fail in puzzling ways if the ```user-groups``` option of ```github.conf``` doesn't have a tailing semi-colon.
+
 ### Integrations and External Programs
 
 #### NuGet
