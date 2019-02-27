@@ -95,9 +95,6 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
 
-* LDAP authentiation will fail if the ```user-groups``` option in ```github.conf``` is missing a trailing semicolon. 
-
-
 #### Notifications
 
 * *Organizations are users*, and can be disabled. If an organization *is* disabled, it *cannot* send notifications; usually manifested as issues with PR comments not being emailed to watchers.
