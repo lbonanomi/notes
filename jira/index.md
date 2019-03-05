@@ -37,7 +37,7 @@ If the LDAP connector fails for whatever-reason having an internal user will all
 
 ** Restrict Volume of Synced Active Directory Users
 
-Filter-out Active Directory users with a pwdLastSet value of '0', they can't log-in anyway.
+Filter-out Active Directory users with a pwdLastSet value of '0'; they won't be able to log-in, anyway.
 
 
  **Create a duplicate LDAP directory**
