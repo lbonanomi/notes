@@ -4,12 +4,12 @@
 
 Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. Be aware that these factoids are from practical experience and *zero training or theoretical basis*. YMMV, remember to floss.
 
-* [Emergency Procedures](Emergency-Procedures)  
+* [Emergency Procedures](emergencies)  
 * [Integrations & External Programs](Integrations-and-External-Programs)  
 * [Ergonomics & Annoyances](Ergonomics-and-Annoyances)  
-* [Performance](Performanc)
+* [Performance](Performance)
 
-
+  
 ### Emergency Procedures
 
 #### Pre-Flight Checks Failing
@@ -119,7 +119,13 @@ Intermediate certificate errors look-like:
 +com.sun.jersey.api.client.ClientHandlerException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
 
-
 ### State of upgrade
 
 * Track upgrade status at /data/user/common/ghe-config.log
+
+
+### Performance
+
+* The UI slows-down with the API
+
+* The API slows down in a cluster with MySQL perf hits.
