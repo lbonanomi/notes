@@ -1,21 +1,20 @@
 # Lessons Learned Managing a GHE Instance
 
-
-
 ## What's this?
 
-Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. These nuggets are won from practical experience (and exactly *zero training or theoretical basis*) with a fairly-standard build of GHE 2.10/2.12/2.14 that was migrated from LDAP to SAML auth on my watch. YMMV, remember to floss.
+Hopefully a few helpful notes for support engineers who have been assigned issues with Github Enterprise. Be aware that these factoids are from practical experience and *zero training or theoretical basis*. YMMV, remember to floss.
 
-* [Emergency Procedures](Emergency-Procedures)  
+* [Emergency Procedures](emergencies)  
 * [Integrations & External Programs](Integrations-and-External-Programs)  
 * [Ergonomics & Annoyances](Ergonomics-and-Annoyances)  
+* [Performance](Performance)
 
-
+  
 ### Emergency Procedures
 
 #### Pre-Flight Checks Failing
 
-Pre Flight Check failure pages on a formerly working instance are scary, but might not be a crisis. If the instance was crash-rebooted running ```ghe-config-apply``` will force the config files to be reloaded and services restarted on a GHE instance.
+If a previously-working instance was rebooted after a crash, running ```ghe-config-apply``` will force the config files to be reloaded and services restarted on a GHE instance. 
 
 #### Pink Unicorn Error
 
@@ -35,11 +34,12 @@ If a repository is too-long gone to be recovered from https://$INSTANCE/stafftoo
 
 LDAP auth will fail in puzzling ways if the ```user-groups``` option of ```github.conf``` doesn't have a tailing semi-colon.
 
+
 ### Integrations and External Programs
 
 #### NuGet
 
-NuGet is observed to ***not work well with git 2.19***. Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic.
+NuGet is observed to ***not work well with git 2.19***. As-of 2019-01-01 Windows users are encouraged to walk back to 2.18 in the face of incredibly slow git traffic. This seems to be related to the cURL library distributed.
 
 #### Interactions between git and GHE:
 
@@ -47,9 +47,9 @@ NuGet is observed to ***not work well with git 2.19***. Windows users are encour
 
 * Use an alternate SSH key with ```GIT_SSH_COMMAND="ssh -i /$PATH_TO_SSH_KEY" git cmd```
 
-* GHE trusts whatever is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
+* GHE trusts *whatever* is in .gitconfig, with potentially hilarious results. This is frequently demonstrated with nonsensical committer names.
 
-* If you git mv or rename a file the log is restarted. Use ```git log --follow``` to track all changes.
+* If you ```git mv``` or rename a file stored in GHE the log is restarted. Use ```git log --follow``` to track all changes.
 
 #### Interactions between Jenkins and GHE:
 
@@ -82,9 +82,9 @@ Admins on networks that segregate traffic between PC and development networks wi
 ### RESQUE
 
   * The maintenance queue pauses during backup executions
-  
-### Ergonomics and Annoyances
 
+
+### Ergonomics and Annoyances
 
 #### Github Organizations
 
@@ -93,11 +93,11 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 #### GHE Username/Profile Links
 
-* Clickable links for a username are driven by the named user's email address
+* Clickable links for a username are driven by the named user's email address.
 
 #### Github Enterprise Auth
 
-* A token with no permissions can clone repositories, but there is no such animal as a "read-only user"
+* There is no such animal as a "read-only user", but a token with no permissions can clone repositories.
 
 #### Notifications
 
@@ -107,11 +107,9 @@ Admins on networks that segregate traffic between PC and development networks wi
 
 * Pull Requests can only be assigned to collaborators.  
 
-
 * If a search shows code but serves 404 links, reindex the code @ ```https://$URL.com/stafftools/repositories/$ORG_NAME/$REPO_NAME/search```  
 
-* OAUTH authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address.  
-
+* OAUTH application authentication (specifically for GitHub Desktop) will fail in strange ways if a user is provisioned without an email address.  
 
 * If you have an internal CA, remember to append the intermediate certificate underneath the server PEM and upload this entire SSL package. Browsers have trust intermediary certs pushed by IT, the Java integrations do not.
 
@@ -121,8 +119,13 @@ Intermediate certificate errors look-like:
 +com.sun.jersey.api.client.ClientHandlerException: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ```
 
-  
-
 ### State of upgrade
 
 * Track upgrade status at /data/user/common/ghe-config.log
+
+
+### Performance
+
+* The UI slows-down with the API
+
+* The API slows down in a cluster with MySQL perf hits.
