@@ -20,7 +20,7 @@ Employer's security team insists on a 90 day password expiration, after which an
 
 Force a new password "JiraPassword" to a local user in a Postgres-backed Jira instance
 
-```update cwd_user set credential='{PKCS5S2}b3c19ePbQB4BAWzb6NogB7oTuSKOATvJxT1JP/1knh+fi1ZwJ8TGmnzmssJsBYvG' where user_name='JIRAP01';```
+```update cwd_user set credential='{PKCS5S2}b3c19ePbQB4BAWzb6NogB7oTuSKOATvJxT1JP/1knh+fi1ZwJ8TGmnzmssJsBYvG' where user_name='SOME_ADMIN';```
 
 **Directory Precedence**
 
@@ -35,7 +35,7 @@ Users are authenticated by the first directory that their name appears-in.
 If the LDAP connector fails for whatever-reason having an internal user will allow an admin to log-in to a running instance to make repairs.
 
 
-** Restrict Volume of Synced Active Directory Users
+**Restrict Volume of Synced Active Directory Users**
 
 Filter-out Active Directory users with a pwdLastSet value of '0'; they won't be able to log-in, anyway.
 
