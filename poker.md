@@ -57,3 +57,39 @@
         &lt;link&gt;https://github.com/github/licensed/issues/31&lt;/link&gt;
         &lt;description&gt;&lt;![CDATA[As found in https://github.com/github/licensed/issues/30#issuecomment-386129385&lt;br/&gt;&lt;br/&gt;&gt; The errors appear to be because my package.json file is actually intended for yarn, and uses some syntax that is not npm-compatible&lt;br/&gt;&lt;br/&gt;[Yarn's](          https://yarnpkg.com/) `package.json` files attempt to be compatible with NPM `package.json` files but can contain differences that cause the NPM dependency source to fail.&lt;br/&gt;&lt;br/&gt;It looks like an indicator that yarn should be used and that npm shouldn't be used is the presence of a `yarn.lock          ` file." ]]&gt;&lt;/description&gt;
 &lt;/item&gt;
+
+
+&lt;item&gt;
+        &lt;title&gt;Invalid event parameters when setting a reminder&lt;/title&gt;
+        &lt;link&gt;https://github.com/github/opensourcefriday/issues/105&lt;/link&gt;
+        &lt;description&gt;&lt;![CDATA[After signing up and clicking on Add to Calendar -&gt; Google Calendar (under Set a reminder), getting the following error - &lt;br/&gt;![screen shot 2017-06-27 at 10 57 39 pm](https://user-images.githubusercontent.com/6823117/27601277-64e039ce-5b8c-11e7-91d0-6fc0170391ad.png)&lt;br/&gt;" ]]&gt;&lt;/description&gt;
+&lt;/item&gt;
+
+&lt;item&gt;
+        &lt;title&gt;delete-empty-repos.sh - Handle Pagination&lt;/title&gt;
+        &lt;link&gt;https://github.com/github/platform-samples/issues/190&lt;/link&gt;
+        &lt;description&gt;&lt;![CDATA[[delete-empty-repos.sh](https://github.com/github/platform-samples/blob/master/api/bash/delete-empty-repos.sh) currently works with default pagination of only 30 repositories.&lt;br/&gt;&lt;br/&gt;Need to handle pagination in case of more than 30 repositories are within the organization.&lt;br/&gt;&lt;br/&gt;[Relevant Doc](https://developer.github.com/v3/guides/traversing-with-pagination/)" ]]&gt;&lt;/description&gt;
+&lt;/item&gt;
+
+&lt;item&gt;
+        &lt;title&gt;Finish migrating to `pathtype` library.&lt;/title&gt;
+        &lt;link&gt;https://github.com/github/semantic/issues/288&lt;/link&gt;
+        &lt;description&gt;&lt;![CDATA[The migration to `pathtype` has been overall a pleasant one—it makes functions much more indicative of their purpose, and it’s caught some bugs (though not serious ones). Right now we’re an uneasy hybrid of `pathtype` solutions and `FilePath`; we should move off of the latter completely. This involves overhauling `Semantic.CLI` to use `pathtype`; the [documentation](http://hackage.haskell.org/package/pathtype-0.8.1) provides a recipe to make `optparse-applicative` parsers do the right thing (respecting the path semantics; i.e., if we tell a parser to expect an absolute path, the parser will fail unless said path is actually absolute.)" ]]&gt;&lt;/description&gt;
+&lt;/item&gt;
+
+&lt;item&gt;
+        &lt;title&gt;Clojure(Script) support&lt;/title&gt;
+        &lt;link&gt;https://github.com/github/semantic/issues/217&lt;/link&gt;
+        &lt;description&gt;&lt;![CDATA[Any possibility of adding Clojure/ClojureScript support?" ]]&gt;&lt;/description&gt;
+&lt;/item&gt;
+
+&lt;item&gt;
+        &lt;title&gt;Don't connect to kext when invoked with CLI args&lt;/title&gt;
+        &lt;link&gt;https://github.com/github/SoftU2F/issues/39&lt;/link&gt;
+        &lt;description&gt;&lt;![CDATA[We try to connect to the kext when the app starts ([code](https://github.com/github/SoftU2F/blob/45825a5bd6e6bad7ae9bd681c8584cbcb6e7fb7b/SoftU2FTool/U2FHID.swift#L24)). This also happens when the app is launched from the command line (Eg. for deleting/listing registrations). If the app is already running in the background we'll get an error because the kext only allows one connection. This error is surfaced to the user, which is confusing. We should not connect to the kext unless we need to." ]]&gt;&lt;/description&gt;
+&lt;/item&gt;
+
+
+&lt;/channel&gt;
+&lt;/rss&gt;
+
