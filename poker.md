@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-<title>Help Wanted</title>
-<description>Help Wanted Issues</description>
-<link>https://.github.io/rss/feed.xml</link>
 <item>
         <title>Add Carthage compatibility badge to the README</title>
         <link>https://github.com/github/Archimedes/issues/38</link>
@@ -21,6 +15,3 @@
         <link>https://github.com/github/choosealicense.com/issues/441</link>
         <description><![CDATA[[Comment/question today](https://github.com/github/choosealicense.com/pull/320#issuecomment-230746990) about whether EUPL-1.1 is accurately described reminded me to file this enhancement idea.<br/><br/>For each license, license rules could be annotated with ranges of text in the license pertinent to the rule. Highlighting of ranges could be turned on/off on individual license pages by selecting in the license rules (permissions/conditions/limitations) table. Very crude mockup taking a very simple case (the one condition of MIT).<br/><br/>![mit-highlight-condition](https://cloud.githubusercontent.com/assets/40415/16633043/25735510-437c-11e6-84f8-1e504d48f345.png)<br/><br/>Obviously this is not a big help for MIT, but for longer licenses, it can be tricky to figure out what bits of the license are pertinent for a particular rule, at least if you only want to read once, which is more already than I suspect most people do.<br/><br/>Such annotations  ]]></description>
 </item>
-
-</channel>
-</rss>
