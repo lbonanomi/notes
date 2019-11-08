@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Curious to see what happens, you know? 
+
+<h3>Search</h3>
+<form id="frm1" action="">
+	<input type="text" name="sbox"><br>
+	<input type="button" onclick="myFunction()" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+	var keywords = encodeURI(document.getElementsByName("sbox")[0].value)
+
+	var search = "https://github.com/search?q=" + keywords + "repo%3Albonanomi%2Fnotes&type=Wikis"
+	window.location.replace(search)
+}
+</script>
+
+</body>
+</html>
