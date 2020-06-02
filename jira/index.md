@@ -22,6 +22,7 @@ Force a new password "JiraPassword" to a local user in a Postgres-backed Jira in
 
 ```update cwd_user set credential='{PKCS5S2}b3c19ePbQB4BAWzb6NogB7oTuSKOATvJxT1JP/1knh+fi1ZwJ8TGmnzmssJsBYvG' where user_name='SOME_ADMIN';```
 
+
 **Directory Precedence**
 
 Users are authenticated by the first directory that their name appears-in. 
@@ -76,6 +77,12 @@ curl -s -k -u $ADMIN:$PASSWORD -X PUT -H "Content-Type: application/vnd.atl.plug
 curl -k -u ADMIN_NAME:ADMIN_PASSWORD -X POST  -H "Content-Type: application/json" -d '{"name":"WEBHOOK_NAME","description":"WEBHOOK DESCRIPTION","url":"http://TARGET_URL","events":["board_created"],"enabled":true,"filters":{"issue-related-events-section":""},"excludeBody":false}' https://jira.host.com/rest/webhooks/1.0/webhook
 ```
 
+
+### Avatars
+
+**Use a private avatar server**
+
+[intravatar](https://github.com/bertbaron/intravatar) is perfect for centrally managing user avatars
 
 ### Jira email
 
