@@ -1,3 +1,5 @@
+lbonanomi: Things written-down since about 1986...
+
 ### Apache  
 * [Compile](https://github.com/lbonanomi/notes/wiki/Apache:Compile)  
 * [Emergencies](https://github.com/lbonanomi/notes/wiki/Apache:Emergencies)  
