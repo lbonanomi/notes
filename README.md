@@ -1,9 +1,62 @@
-# LBonanomi's Notebooks
+An index of the attached wiki
 
-----------
-
-### [Assorted Opinions and Maxims for Jira Engineers](jira/index.md)
-
-### [Managing Linux users from Active Directory](active_directory/index.md)
-
-### [Lessons Learned Managing a GHE Instance](ghe/index.md)
+### Apache  
+* [Compile](https://github.com/lbonanomi/notes/wiki/Apache:Compile)  
+* [Emergencies](https://github.com/lbonanomi/notes/wiki/Apache:Emergencies)  
+* [Proxy](https://github.com/lbonanomi/notes/wiki/Apache:Proxy)  
+### GHE  
+* [Backup-and-Restore](https://github.com/lbonanomi/notes/wiki/GHE:Backup-and-Restore)  
+* [Console](https://github.com/lbonanomi/notes/wiki/GHE:Console)  
+* [Emergencies](https://github.com/lbonanomi/notes/wiki/GHE:Emergencies)  
+* [Housekeeping](https://github.com/lbonanomi/notes/wiki/GHE:Housekeeping)  
+* [Integrations-and-External-Programs](https://github.com/lbonanomi/notes/wiki/GHE:Integrations-and-External-Programs)  
+* [Search](https://github.com/lbonanomi/notes/wiki/GHE:Search)  
+* [Throttles](https://github.com/lbonanomi/notes/wiki/GHE:Throttles)  
+* [Usage](https://github.com/lbonanomi/notes/wiki/GHE:Usage)  
+### Grafana  
+* [Build](https://github.com/lbonanomi/notes/wiki/Grafana:Build)  
+* [Okta](https://github.com/lbonanomi/notes/wiki/Grafana:Okta)  
+### Java  
+* [Gradle](https://github.com/lbonanomi/notes/wiki/Java:Gradle)  
+### Jenkins  
+* [Am-I-live](https://github.com/lbonanomi/notes/wiki/Jenkins:Am-I-live)  
+### Jira  
+* [Application-Links](https://github.com/lbonanomi/notes/wiki/Jira:Application-Links)  
+* [Attachments](https://github.com/lbonanomi/notes/wiki/Jira:Attachments)  
+* [Avatars](https://github.com/lbonanomi/notes/wiki/Jira:Avatars)  
+* [ConfigurationManager](https://github.com/lbonanomi/notes/wiki/Jira:ConfigurationManager)  
+* [DVCS](https://github.com/lbonanomi/notes/wiki/Jira:DVCS)  
+* [Database](https://github.com/lbonanomi/notes/wiki/Jira:Database)  
+* [Datacenter](https://github.com/lbonanomi/notes/wiki/Jira:Datacenter)  
+* [Email](https://github.com/lbonanomi/notes/wiki/Jira:Email)  
+* [Emergencies](https://github.com/lbonanomi/notes/wiki/Jira:Emergencies)  
+* [Interface](https://github.com/lbonanomi/notes/wiki/Jira:Interface)  
+* [Links](https://github.com/lbonanomi/notes/wiki/Jira:Links)  
+* [Password](https://github.com/lbonanomi/notes/wiki/Jira:Password)  
+* [Plugins](https://github.com/lbonanomi/notes/wiki/Jira:Plugins)  
+* [Python](https://github.com/lbonanomi/notes/wiki/Jira:Python)  
+* [ScriptRunner](https://github.com/lbonanomi/notes/wiki/Jira:ScriptRunner)  
+* [Scripting](https://github.com/lbonanomi/notes/wiki/Jira:Scripting)  
+* [Selenium](https://github.com/lbonanomi/notes/wiki/Jira:Selenium)  
+* [ServiceDesk](https://github.com/lbonanomi/notes/wiki/Jira:ServiceDesk)  
+* [UI](https://github.com/lbonanomi/notes/wiki/Jira:UI)  
+* [Users](https://github.com/lbonanomi/notes/wiki/Jira:Users)  
+* [Webhooks](https://github.com/lbonanomi/notes/wiki/Jira:Webhooks)  
+* [Workflow](https://github.com/lbonanomi/notes/wiki/Jira:Workflow)  
+* [Workflows](https://github.com/lbonanomi/notes/wiki/Jira:Workflows)  
+### OpenLDAP  
+* [Active-Directory-User-Disabled-Checkbox](https://github.com/lbonanomi/notes/wiki/OpenLDAP:Active-Directory-User-Disabled-Checkbox)  
+* [Add-User-to-Active-Directory-Group](https://github.com/lbonanomi/notes/wiki/OpenLDAP:Add-User-to-Active-Directory-Group)  
+* [Get-Last-Password-Reset](https://github.com/lbonanomi/notes/wiki/OpenLDAP:Get-Last-Password-Reset)  
+### Openstack  
+* [VMs-from-cURL](https://github.com/lbonanomi/notes/wiki/Openstack:VMs-from-cURL)  
+### SSL  
+* [Correlate-PEM-and-KEY-Files](https://github.com/lbonanomi/notes/wiki/SSL:Correlate-PEM-and-KEY-Files)  
+* [Get-Domain-for-SSL-Cert](https://github.com/lbonanomi/notes/wiki/SSL:Get-Domain-for-SSL-Cert)  
+* [Java-Keystores](https://github.com/lbonanomi/notes/wiki/SSL:Java-Keystores)  
+### X  
+* [Enable](https://github.com/lbonanomi/notes/wiki/X:Enable)  
+### kubernetes  
+* [minikube](https://github.com/lbonanomi/notes/wiki/kubernetes:minikube)  
+### webdriver  
+* [dump-all-elements](https://github.com/lbonanomi/notes/wiki/webdriver:dump-all-elements)  
