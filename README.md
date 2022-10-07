@@ -1,4 +1,4 @@
-lbonanomi: Things written-down since about 1986...
+An index of the attached wiki
 
 ### Apache  
 * [Compile](https://github.com/lbonanomi/notes/wiki/Apache:Compile)  
